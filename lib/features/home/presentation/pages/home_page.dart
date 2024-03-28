@@ -115,10 +115,11 @@ class _HomePageState extends State<HomePage> {
                                       listCategory: state.categories,
                                       selectedCategory: selectedCategory,
                                       onSelectedCategory: (category) {
-                                        setState(() {
-                                          _selectedCategoryNotifier.value =
-                                              category;
-                                        });
+                                        _selectedCategoryNotifier.value =
+                                            category;
+                                        context.read<HomeBloc>().add(
+                                            FilterProductsByCategoryEvent(
+                                                category: category));
                                       },
                                     );
                                   }),

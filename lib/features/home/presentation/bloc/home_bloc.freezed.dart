@@ -21,6 +21,7 @@ mixin _$HomeEvent {
     required TResult Function() fetchAllProducts,
     required TResult Function() fetchAllCategories,
     required TResult Function(String productName) searchProduct,
+    required TResult Function(String category) filterProductsByCategory,
     required TResult Function() logout,
   }) =>
       throw _privateConstructorUsedError;
@@ -29,6 +30,7 @@ mixin _$HomeEvent {
     TResult? Function()? fetchAllProducts,
     TResult? Function()? fetchAllCategories,
     TResult? Function(String productName)? searchProduct,
+    TResult? Function(String category)? filterProductsByCategory,
     TResult? Function()? logout,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,6 +39,7 @@ mixin _$HomeEvent {
     TResult Function()? fetchAllProducts,
     TResult Function()? fetchAllCategories,
     TResult Function(String productName)? searchProduct,
+    TResult Function(String category)? filterProductsByCategory,
     TResult Function()? logout,
     required TResult orElse(),
   }) =>
@@ -46,6 +49,8 @@ mixin _$HomeEvent {
     required TResult Function(FetchAllProductsEvent value) fetchAllProducts,
     required TResult Function(FetchAllCategoriesEvent value) fetchAllCategories,
     required TResult Function(SearchProductEvent value) searchProduct,
+    required TResult Function(FilterProductsByCategoryEvent value)
+        filterProductsByCategory,
     required TResult Function(LogoutEvent value) logout,
   }) =>
       throw _privateConstructorUsedError;
@@ -54,6 +59,8 @@ mixin _$HomeEvent {
     TResult? Function(FetchAllProductsEvent value)? fetchAllProducts,
     TResult? Function(FetchAllCategoriesEvent value)? fetchAllCategories,
     TResult? Function(SearchProductEvent value)? searchProduct,
+    TResult? Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
     TResult? Function(LogoutEvent value)? logout,
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +69,8 @@ mixin _$HomeEvent {
     TResult Function(FetchAllProductsEvent value)? fetchAllProducts,
     TResult Function(FetchAllCategoriesEvent value)? fetchAllCategories,
     TResult Function(SearchProductEvent value)? searchProduct,
+    TResult Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
     TResult Function(LogoutEvent value)? logout,
     required TResult orElse(),
   }) =>
@@ -128,6 +137,7 @@ class _$FetchAllProductsEventImpl implements FetchAllProductsEvent {
     required TResult Function() fetchAllProducts,
     required TResult Function() fetchAllCategories,
     required TResult Function(String productName) searchProduct,
+    required TResult Function(String category) filterProductsByCategory,
     required TResult Function() logout,
   }) {
     return fetchAllProducts();
@@ -139,6 +149,7 @@ class _$FetchAllProductsEventImpl implements FetchAllProductsEvent {
     TResult? Function()? fetchAllProducts,
     TResult? Function()? fetchAllCategories,
     TResult? Function(String productName)? searchProduct,
+    TResult? Function(String category)? filterProductsByCategory,
     TResult? Function()? logout,
   }) {
     return fetchAllProducts?.call();
@@ -150,6 +161,7 @@ class _$FetchAllProductsEventImpl implements FetchAllProductsEvent {
     TResult Function()? fetchAllProducts,
     TResult Function()? fetchAllCategories,
     TResult Function(String productName)? searchProduct,
+    TResult Function(String category)? filterProductsByCategory,
     TResult Function()? logout,
     required TResult orElse(),
   }) {
@@ -165,6 +177,8 @@ class _$FetchAllProductsEventImpl implements FetchAllProductsEvent {
     required TResult Function(FetchAllProductsEvent value) fetchAllProducts,
     required TResult Function(FetchAllCategoriesEvent value) fetchAllCategories,
     required TResult Function(SearchProductEvent value) searchProduct,
+    required TResult Function(FilterProductsByCategoryEvent value)
+        filterProductsByCategory,
     required TResult Function(LogoutEvent value) logout,
   }) {
     return fetchAllProducts(this);
@@ -176,6 +190,8 @@ class _$FetchAllProductsEventImpl implements FetchAllProductsEvent {
     TResult? Function(FetchAllProductsEvent value)? fetchAllProducts,
     TResult? Function(FetchAllCategoriesEvent value)? fetchAllCategories,
     TResult? Function(SearchProductEvent value)? searchProduct,
+    TResult? Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
     TResult? Function(LogoutEvent value)? logout,
   }) {
     return fetchAllProducts?.call(this);
@@ -187,6 +203,8 @@ class _$FetchAllProductsEventImpl implements FetchAllProductsEvent {
     TResult Function(FetchAllProductsEvent value)? fetchAllProducts,
     TResult Function(FetchAllCategoriesEvent value)? fetchAllCategories,
     TResult Function(SearchProductEvent value)? searchProduct,
+    TResult Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
     TResult Function(LogoutEvent value)? logout,
     required TResult orElse(),
   }) {
@@ -245,6 +263,7 @@ class _$FetchAllCategoriesEventImpl implements FetchAllCategoriesEvent {
     required TResult Function() fetchAllProducts,
     required TResult Function() fetchAllCategories,
     required TResult Function(String productName) searchProduct,
+    required TResult Function(String category) filterProductsByCategory,
     required TResult Function() logout,
   }) {
     return fetchAllCategories();
@@ -256,6 +275,7 @@ class _$FetchAllCategoriesEventImpl implements FetchAllCategoriesEvent {
     TResult? Function()? fetchAllProducts,
     TResult? Function()? fetchAllCategories,
     TResult? Function(String productName)? searchProduct,
+    TResult? Function(String category)? filterProductsByCategory,
     TResult? Function()? logout,
   }) {
     return fetchAllCategories?.call();
@@ -267,6 +287,7 @@ class _$FetchAllCategoriesEventImpl implements FetchAllCategoriesEvent {
     TResult Function()? fetchAllProducts,
     TResult Function()? fetchAllCategories,
     TResult Function(String productName)? searchProduct,
+    TResult Function(String category)? filterProductsByCategory,
     TResult Function()? logout,
     required TResult orElse(),
   }) {
@@ -282,6 +303,8 @@ class _$FetchAllCategoriesEventImpl implements FetchAllCategoriesEvent {
     required TResult Function(FetchAllProductsEvent value) fetchAllProducts,
     required TResult Function(FetchAllCategoriesEvent value) fetchAllCategories,
     required TResult Function(SearchProductEvent value) searchProduct,
+    required TResult Function(FilterProductsByCategoryEvent value)
+        filterProductsByCategory,
     required TResult Function(LogoutEvent value) logout,
   }) {
     return fetchAllCategories(this);
@@ -293,6 +316,8 @@ class _$FetchAllCategoriesEventImpl implements FetchAllCategoriesEvent {
     TResult? Function(FetchAllProductsEvent value)? fetchAllProducts,
     TResult? Function(FetchAllCategoriesEvent value)? fetchAllCategories,
     TResult? Function(SearchProductEvent value)? searchProduct,
+    TResult? Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
     TResult? Function(LogoutEvent value)? logout,
   }) {
     return fetchAllCategories?.call(this);
@@ -304,6 +329,8 @@ class _$FetchAllCategoriesEventImpl implements FetchAllCategoriesEvent {
     TResult Function(FetchAllProductsEvent value)? fetchAllProducts,
     TResult Function(FetchAllCategoriesEvent value)? fetchAllCategories,
     TResult Function(SearchProductEvent value)? searchProduct,
+    TResult Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
     TResult Function(LogoutEvent value)? logout,
     required TResult orElse(),
   }) {
@@ -387,6 +414,7 @@ class _$SearchProductEventImpl implements SearchProductEvent {
     required TResult Function() fetchAllProducts,
     required TResult Function() fetchAllCategories,
     required TResult Function(String productName) searchProduct,
+    required TResult Function(String category) filterProductsByCategory,
     required TResult Function() logout,
   }) {
     return searchProduct(productName);
@@ -398,6 +426,7 @@ class _$SearchProductEventImpl implements SearchProductEvent {
     TResult? Function()? fetchAllProducts,
     TResult? Function()? fetchAllCategories,
     TResult? Function(String productName)? searchProduct,
+    TResult? Function(String category)? filterProductsByCategory,
     TResult? Function()? logout,
   }) {
     return searchProduct?.call(productName);
@@ -409,6 +438,7 @@ class _$SearchProductEventImpl implements SearchProductEvent {
     TResult Function()? fetchAllProducts,
     TResult Function()? fetchAllCategories,
     TResult Function(String productName)? searchProduct,
+    TResult Function(String category)? filterProductsByCategory,
     TResult Function()? logout,
     required TResult orElse(),
   }) {
@@ -424,6 +454,8 @@ class _$SearchProductEventImpl implements SearchProductEvent {
     required TResult Function(FetchAllProductsEvent value) fetchAllProducts,
     required TResult Function(FetchAllCategoriesEvent value) fetchAllCategories,
     required TResult Function(SearchProductEvent value) searchProduct,
+    required TResult Function(FilterProductsByCategoryEvent value)
+        filterProductsByCategory,
     required TResult Function(LogoutEvent value) logout,
   }) {
     return searchProduct(this);
@@ -435,6 +467,8 @@ class _$SearchProductEventImpl implements SearchProductEvent {
     TResult? Function(FetchAllProductsEvent value)? fetchAllProducts,
     TResult? Function(FetchAllCategoriesEvent value)? fetchAllCategories,
     TResult? Function(SearchProductEvent value)? searchProduct,
+    TResult? Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
     TResult? Function(LogoutEvent value)? logout,
   }) {
     return searchProduct?.call(this);
@@ -446,6 +480,8 @@ class _$SearchProductEventImpl implements SearchProductEvent {
     TResult Function(FetchAllProductsEvent value)? fetchAllProducts,
     TResult Function(FetchAllCategoriesEvent value)? fetchAllCategories,
     TResult Function(SearchProductEvent value)? searchProduct,
+    TResult Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
     TResult Function(LogoutEvent value)? logout,
     required TResult orElse(),
   }) {
@@ -464,6 +500,168 @@ abstract class SearchProductEvent implements HomeEvent {
   @JsonKey(ignore: true)
   _$$SearchProductEventImplCopyWith<_$SearchProductEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FilterProductsByCategoryEventImplCopyWith<$Res> {
+  factory _$$FilterProductsByCategoryEventImplCopyWith(
+          _$FilterProductsByCategoryEventImpl value,
+          $Res Function(_$FilterProductsByCategoryEventImpl) then) =
+      __$$FilterProductsByCategoryEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String category});
+}
+
+/// @nodoc
+class __$$FilterProductsByCategoryEventImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$FilterProductsByCategoryEventImpl>
+    implements _$$FilterProductsByCategoryEventImplCopyWith<$Res> {
+  __$$FilterProductsByCategoryEventImplCopyWithImpl(
+      _$FilterProductsByCategoryEventImpl _value,
+      $Res Function(_$FilterProductsByCategoryEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? category = null,
+  }) {
+    return _then(_$FilterProductsByCategoryEventImpl(
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FilterProductsByCategoryEventImpl
+    implements FilterProductsByCategoryEvent {
+  const _$FilterProductsByCategoryEventImpl({required this.category});
+
+  @override
+  final String category;
+
+  @override
+  String toString() {
+    return 'HomeEvent.filterProductsByCategory(category: $category)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FilterProductsByCategoryEventImpl &&
+            (identical(other.category, category) ||
+                other.category == category));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, category);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FilterProductsByCategoryEventImplCopyWith<
+          _$FilterProductsByCategoryEventImpl>
+      get copyWith => __$$FilterProductsByCategoryEventImplCopyWithImpl<
+          _$FilterProductsByCategoryEventImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchAllProducts,
+    required TResult Function() fetchAllCategories,
+    required TResult Function(String productName) searchProduct,
+    required TResult Function(String category) filterProductsByCategory,
+    required TResult Function() logout,
+  }) {
+    return filterProductsByCategory(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchAllProducts,
+    TResult? Function()? fetchAllCategories,
+    TResult? Function(String productName)? searchProduct,
+    TResult? Function(String category)? filterProductsByCategory,
+    TResult? Function()? logout,
+  }) {
+    return filterProductsByCategory?.call(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchAllProducts,
+    TResult Function()? fetchAllCategories,
+    TResult Function(String productName)? searchProduct,
+    TResult Function(String category)? filterProductsByCategory,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (filterProductsByCategory != null) {
+      return filterProductsByCategory(category);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FetchAllProductsEvent value) fetchAllProducts,
+    required TResult Function(FetchAllCategoriesEvent value) fetchAllCategories,
+    required TResult Function(SearchProductEvent value) searchProduct,
+    required TResult Function(FilterProductsByCategoryEvent value)
+        filterProductsByCategory,
+    required TResult Function(LogoutEvent value) logout,
+  }) {
+    return filterProductsByCategory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(FetchAllProductsEvent value)? fetchAllProducts,
+    TResult? Function(FetchAllCategoriesEvent value)? fetchAllCategories,
+    TResult? Function(SearchProductEvent value)? searchProduct,
+    TResult? Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
+    TResult? Function(LogoutEvent value)? logout,
+  }) {
+    return filterProductsByCategory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FetchAllProductsEvent value)? fetchAllProducts,
+    TResult Function(FetchAllCategoriesEvent value)? fetchAllCategories,
+    TResult Function(SearchProductEvent value)? searchProduct,
+    TResult Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
+    TResult Function(LogoutEvent value)? logout,
+    required TResult orElse(),
+  }) {
+    if (filterProductsByCategory != null) {
+      return filterProductsByCategory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FilterProductsByCategoryEvent implements HomeEvent {
+  const factory FilterProductsByCategoryEvent(
+      {required final String category}) = _$FilterProductsByCategoryEventImpl;
+
+  String get category;
+  @JsonKey(ignore: true)
+  _$$FilterProductsByCategoryEventImplCopyWith<
+          _$FilterProductsByCategoryEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -507,6 +705,7 @@ class _$LogoutEventImpl implements LogoutEvent {
     required TResult Function() fetchAllProducts,
     required TResult Function() fetchAllCategories,
     required TResult Function(String productName) searchProduct,
+    required TResult Function(String category) filterProductsByCategory,
     required TResult Function() logout,
   }) {
     return logout();
@@ -518,6 +717,7 @@ class _$LogoutEventImpl implements LogoutEvent {
     TResult? Function()? fetchAllProducts,
     TResult? Function()? fetchAllCategories,
     TResult? Function(String productName)? searchProduct,
+    TResult? Function(String category)? filterProductsByCategory,
     TResult? Function()? logout,
   }) {
     return logout?.call();
@@ -529,6 +729,7 @@ class _$LogoutEventImpl implements LogoutEvent {
     TResult Function()? fetchAllProducts,
     TResult Function()? fetchAllCategories,
     TResult Function(String productName)? searchProduct,
+    TResult Function(String category)? filterProductsByCategory,
     TResult Function()? logout,
     required TResult orElse(),
   }) {
@@ -544,6 +745,8 @@ class _$LogoutEventImpl implements LogoutEvent {
     required TResult Function(FetchAllProductsEvent value) fetchAllProducts,
     required TResult Function(FetchAllCategoriesEvent value) fetchAllCategories,
     required TResult Function(SearchProductEvent value) searchProduct,
+    required TResult Function(FilterProductsByCategoryEvent value)
+        filterProductsByCategory,
     required TResult Function(LogoutEvent value) logout,
   }) {
     return logout(this);
@@ -555,6 +758,8 @@ class _$LogoutEventImpl implements LogoutEvent {
     TResult? Function(FetchAllProductsEvent value)? fetchAllProducts,
     TResult? Function(FetchAllCategoriesEvent value)? fetchAllCategories,
     TResult? Function(SearchProductEvent value)? searchProduct,
+    TResult? Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
     TResult? Function(LogoutEvent value)? logout,
   }) {
     return logout?.call(this);
@@ -566,6 +771,8 @@ class _$LogoutEventImpl implements LogoutEvent {
     TResult Function(FetchAllProductsEvent value)? fetchAllProducts,
     TResult Function(FetchAllCategoriesEvent value)? fetchAllCategories,
     TResult Function(SearchProductEvent value)? searchProduct,
+    TResult Function(FilterProductsByCategoryEvent value)?
+        filterProductsByCategory,
     TResult Function(LogoutEvent value)? logout,
     required TResult orElse(),
   }) {

@@ -22,6 +22,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<FetchAllProductsEvent>(_onFetchAllProducts);
     on<FetchAllCategoriesEvent>(_onFetchAllCategories);
     on<SearchProductEvent>(_onSearchProduct);
+    on<FilterProductsByCategoryEvent>(_onFilterProductsByCategory);
     on<LogoutEvent>(_onLogout);
   }
   final FetchAllProductsUseCase _fetchAllProductsUseCase;
@@ -88,6 +89,21 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       emit(state.copyWith(filteredProducts: filteredProducts));
     } else {
       emit(state.copyWith(filteredProducts: defaultProducts));
+    }
+  }
+
+  void _onFilterProductsByCategory(FilterProductsByCategoryEvent event, emit) {
+    List<ProductEntity> defaultProducts = List.from(state.defaultProducts);
+
+    if (event.category.toLowerCase() == 'all') {
+      emit(state.copyWith(filteredProducts: defaultProducts));
+    } else {
+      final filteredProducts = defaultProducts
+          .where((element) =>
+              element.category.toLowerCase() == event.category.toLowerCase())
+          .toList();
+
+      emit(state.copyWith(filteredProducts: filteredProducts));
     }
   }
 

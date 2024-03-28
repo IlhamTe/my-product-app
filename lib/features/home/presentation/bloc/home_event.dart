@@ -7,5 +7,8 @@ class HomeEvent with _$HomeEvent {
   const factory HomeEvent.searchProduct({
     required String productName,
   }) = SearchProductEvent;
+  const factory HomeEvent.filterProductsByCategory({
+    required String category,
+  }) = FilterProductsByCategoryEvent;
   const factory HomeEvent.logout() = LogoutEvent;
 }
