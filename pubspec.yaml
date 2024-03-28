@@ -1,0 +1,69 @@
+name: my_product_app
+description: "Mini Project for SERA Technical Test"
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  equatable: ^2.0.5
+  dio: ^5.4.0
+  flutter_bloc: ^8.1.3
+
+  ## Related to local storage
+  shared_preferences: ^2.2.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Related to Clean Code/Architecture needs
+  dartz: ^0.10.1
+  freezed_annotation: ^2.4.1
+  get_it: ^7.6.7
+  injectable: ^2.3.2
+  json_annotation: ^4.8.1
+
+  # Related to UI/Widget/Style
+  toastification: ^1.2.1
+  cached_network_image: ^3.3.1
+  scrollable_positioned_list: ^0.3.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+  # Related to Clean Code/Architecture needs
+  build_runner: ^2.4.8
+  freezed: ^2.4.7
+  injectable_generator: ^2.4.1
+  json_serializable: ^6.7.1
+  hive_generator: ^2.0.1
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+
+  fonts:
+    - family: WorkSans
+      fonts:
+        - asset: assets/fonts/WorkSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/WorkSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/WorkSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/WorkSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/WorkSans-Bold.ttf
+          weight: 700
